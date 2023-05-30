@@ -1,27 +1,49 @@
 
-<?php include 'inc/feedBackdbase.php'; ?>
+
+<?php include 'inc/header.php'; ?>
 <?php 
        $sql ="SELECT * FROM Feedback;";
        $result = mysqli_query($connection, $sql);
-       
+       $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
        ?>
-<?php include 'inc/header.php'; ?>
-<div class="row">
 
-<div class="card w-75 mb-3 mx-auto col-md-12  text-center my-5">
-<div class="card-header">
-    Featured
-  </div>
+<div class="row">
+<?php if(empty($feedback)): ?>
+  <p class="lead text-danger p-2 text-center fw-bold">
+  There Is no Feedback
+ </p>
+ <?php endif; ?>
+
+  <?php foreach($feedback as $item) :?>
+    <!-- the multiple nested divs that exist below is a result of a custom bootstrap implentations of a particular component. the classes have a pre defined meaning recognized and executed by bootstrap -->
+    
+<div class="card w-75 mb-3 col-md-12 mx-auto  text-center my-5">
+<div class="card-header text-light-50">
+  
+  <h5 class="text-body-tertiary">Email Address</h5>
+  <button class="btn btn-warning col-sm-12" type="button" disabled>
+  <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
+  <?php echo $item['email']?>
+</button>
+</div>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <div class="card-footer text-body-secondary">
-    2 days ago
+    <h5 class="card-title ">
+    <span class="badge text-bg-secondary"> <?php echo $item['id'] ?>
+  </span>
+    </h5>
+
+
+    <p class="card-text"> <?php echo $item['feed'] ?> 
+    </p>
+    <div class="card-footer text-body-secondary"> <em>by</em> <?php echo $item['FullName']?> <em>on </em>
+    <?php echo $item['date']?>
   </div>
    
   </div>
 </div>
+<?php endforeach; ?>
 </div>
-<?php include 'inc/footer.php'; ?>
 
+
+<?php include 'inc/footer.php'; ?>
 

@@ -1,3 +1,4 @@
+<?php include 'inc/feedBackdbase.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +25,14 @@
         /* section{min-height: 100vh;} */
     /* the 100vh for section is not practicable since i'd including the same header file in other php pages*/
         form label{font-size: 85%; font-weight: bold; color: rgb(61, 61, 61);} 
+      
     </style>
     <title>FeedBack Page</title>
 </head>
 <body>
     
         
-        <section class="section col-6  mx-auto  my-2 shadow">
+        <section class="section col-lg-6  col-sm-12  mx-auto  my-2 shadow">
             <div class="container ">
             <div class="row ">
             
