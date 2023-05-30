@@ -30,7 +30,11 @@
 <body>
     
         
+<<<<<<< HEAD:inc/header.php
         <section class="section col-6  mx-auto  my-2 shadow">
+=======
+        <section class="section col-6 mx-auto  my-5 shadow">
+>>>>>>> 27156a6509cc9e5494a5589c5d5d4ae5cb2826b7:header.php
             <div class="container ">
             <div class="row ">
             
