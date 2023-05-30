@@ -1,7 +1,10 @@
-<?php include 'header.php'; ?>
+
+<?php include 'inc/feedBackdbase.php'; ?>
+
+<?php include 'inc/header.php'; ?>
            <div class="row">
-            <div class="col-md-12 mx-auto text-center my-4">
-                <img src="assets/ikoku_online_logo_.png" alt="ikoku online Logo" height="60px">
+            <div class="col-md-12 mx-auto text-center mt-5 ">
+                <img src="assets/ikoku_online_logo_.png" alt="ikoku online Logo" height="60px" class="">
             </div>
         </div>
  
@@ -11,23 +14,31 @@
             <form action="#" class="mt-4 w-75 col-md-10 mx-auto">
                 <div class="mb-3">
                     <label for="name" class="form-label"> Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" autocomplete="off">
+                    <input type="text" class="form-control shadow" id="name" name="name" placeholder="Enter your Name" autocomplete="off">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label"> Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" autocomplete="off">
+                    <input type="email" class="form-control shadow" id="email" name="email" placeholder="Enter your Email" autocomplete="off">
                 </div>
                 <div class="mb-5">
                     <label for="body" class="form-label"> Feedback</label>
-                    <textarea class="form-control" id="body" name="body" placeholder="Enter your feedback" autocomplete="off">
+                    <textarea class="form-control shadow " id="body" name="body" placeholder="Enter your feedback" autocomplete="off">
                         </textarea>
                 </div>
                 <div class="mb-3 ">
                     
-                    <button class="btn btn-outline-secondary w-50 d-grid mx-auto fw-bold" name="submit">SEND
+                    <button class="btn btn-outline-secondary w-50 d-grid mx-auto fw-bold shadow-lg" name="submit">SEND
                     </button>
                 </div>
                 
             </form>
         </div>
-        <?php include 'footer.php'; ?>
+        <?php include 'inc/footer.php'; ?>
+        
+       <!--  Datatbase/ msql code comes In from here-->
+
+       <?php 
+       $sql ="SELECT * FROM Feedback;";
+       $result = mysqli_query($connection, $sql);
+       
+       ?>

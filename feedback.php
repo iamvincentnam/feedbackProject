@@ -1,4 +1,11 @@
-<?php include 'header.php'; ?>
+
+<?php include 'inc/feedBackdbase.php'; ?>
+<?php 
+       $sql ="SELECT * FROM Feedback;";
+       $result = mysqli_query($connection, $sql);
+       
+       ?>
+<?php include 'inc/header.php'; ?>
 <div class="row">
 
 <div class="card w-75 mb-3 mx-auto col-md-12  text-center my-5">
@@ -15,6 +22,6 @@
   </div>
 </div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
 
 

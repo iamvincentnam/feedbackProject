@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2023 at 04:24 PM
+-- Generation Time: May 30, 2023 at 06:43 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `feedback` (
   `id` int(11) NOT NULL,
   `FullName` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `feed` varchar(255) NOT NULL,
   `date` date DEFAULT curdate()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -38,9 +39,9 @@ CREATE TABLE `feedback` (
 -- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `FullName`, `feed`, `date`) VALUES
-(1, 'Fortune Bekee', 'Please note that the actual syntax for specifying the current date as the default value may vary depending on the database management system you are using.', '2023-05-30'),
-(2, 'Vincent Nam', 'Certainly! Here\'s an example of how a TIMESTAMP data type value might look', '2023-05-30');
+INSERT INTO `feedback` (`id`, `FullName`, `email`, `feed`, `date`) VALUES
+(1, 'Fortune Bekee', 'fortunebeks@ikokuonline.com', 'Please note that the actual syntax for specifying the current date as the default value may vary depending on the database management system you are using.', '2023-05-30'),
+(2, 'Vincent Nam', 'vincentnam22@gmail.com', 'Certainly! Here\'s an example of how a TIMESTAMP data type value might look', '2023-05-30');
 
 -- --------------------------------------------------------
 
