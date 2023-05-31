@@ -1,5 +1,5 @@
 <div class="text-body-tertiary text-end">
-    @iamvincentnam
+    twitter@iamvincentnam
             </div>
 <div class="row">
             <div class="col-md-12 text-center fw-bold py-3 mt-4 bg-dark text-white-50">
