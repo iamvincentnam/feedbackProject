@@ -42,9 +42,6 @@ if($result = mysqli_query($connection, $sql_insertion)){
 
 
 }
-// echo $name . "<br>";
-// echo $email . "<br>" ;
-// echo $body . "<br>";
 }
 
 ?>
