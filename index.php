@@ -44,6 +44,7 @@ if($result = mysqli_query($connection, $sql_insertion)){
 }
 }
 
+
 ?>
 
 
@@ -93,7 +94,7 @@ if($result = mysqli_query($connection, $sql_insertion)){
                 </div>
                 
             </form>
-         
+           
         </div>
  
         <?php include 'inc/footer.php'; ?>
