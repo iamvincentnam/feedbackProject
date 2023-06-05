@@ -5,6 +5,19 @@
        $sql ="SELECT * FROM Feedback;";
        $result = mysqli_query($connection, $sql);
        $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+       // to delete the file
+$id ='';
+       if(isset($_GET['deleteIcon'])){
+        $id = $_GET['deleteIcon'];
+        $sql_deletion = "DELETE FROM Feedback WHERE id = $id;";
+        if( mysqli_query($connection, $sql_deletion)){
+                header('Location: feedback.php?message='. urldecode('Row with ID ' . $id . ' deleted' ));
+                exit();
+        }else{
+            echo 'Error' . mysqli_error($connection);
+        }
+    }
        ?>
 
 <div class="row">
@@ -40,6 +53,9 @@
   </div>
    
   </div>
+  <div class="delete-icon col-md-1 mx-auto mb-2">
+  <span class="material-symbols-outlined fs-3" name="deleteIcon"><a href="?deleteIcon=<?php echo $item['id']; ?>">delete</a></span>
+            </div>
 </div>
 <?php endforeach; ?>
 </div>
