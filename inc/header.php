@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         body{background-color:#4f6a8f;}
         input::placeholder{color: #5f5f5f95 !important;}
@@ -25,6 +26,18 @@
         /* section{min-height: 100vh;} */
     /* the 100vh for section is not practicable since i'd including the same header file in other php pages*/
         form label{font-size: 85%; font-weight: bold; color: rgb(61, 61, 61);} 
+        
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+    .delete-icon span{cursor: pointer; }
+    .delete-icon span a{text-decoration: none; color: lightslategray;}
+    .delete-icon span:hover{scale: 1.1;}
       
     </style>
     <title>FeedBack Page</title>
